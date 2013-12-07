@@ -1,0 +1,9 @@
+
++ The project is a party invitation/registration site.
++ I collect data from party goers in a friendly manner while keeping the users entertained with pictures that a displayed as event change on the page.
++ The site then uses local storage to store the registration status of the user and mimicks a submission in the process.
++ Minimal information required is the users name and this is checked before persistence to local storage.
++ User have the ability to cancel or clear their registration.
+
++ A google map is also implemented to guide users from their locations to the party location.
++ All validations are clean except the "&" symbol use in one of the google library addresses.

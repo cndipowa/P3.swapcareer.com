@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Party Time !</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="js/script.js">
+	</script>
+</head>
+ <body>
+	<div id="mydata">
+	<h3 class="center">Party Registration Site</h3>
+	<form id="myform" action="Index.html" >
+		<fieldset id="myfieldset">
+			   <table>
+					<tr>
+						<td><label for="myname"> Name </label> </td>
+						<td><input id="myname" type="text" name="name" required/> </td>
+					</tr>
+					<tr>
+						<td><label for="myemail">Email </label> </td>
+						<td><input id="myemail" type="text" name="name" /> </td>
+					</tr>
+					<tr>
+						 <td><label for="myphone">Phone</label> </td>
+						 <td><input id="myphone" type="text" name="name" /> </td>
+					</tr>
+			 </table>
+				   <input type="radio" value="male" name="optin" onclick="doOnClick(this)">Male
+				   <input type="radio" value="female" name="optin" onclick="doOnClick(this)">Female
+				  
+			  <p>Music preference:
+				<select id="mydirection"  name="direction">
+				  <option value="O">Select one...</option>
+				  <option value="N">Rock Music</option>
+				  <option value="S">Reggae Music</option>
+				  <option value="E">Hip-Hop Music</option>
+				  <option value="W">Something Else</option>
+				</select>
+			  </p>
+			  
+				<input type="button" id="saveAll" name="Submit" value="Submit RSVP"/><input type="button" id="clearAll" name="Clear" value="Clear"/>
+				<div id="regOrnot"></div>
+			  
+       </fieldset>
+     </form>
+		<p id="status"><img src="images/blank.png" alt="event image" id="event_image" /><br/>
+		<span id="statuscaption">Guess What ? Its party time ! </span></p>
+	</div>
+    <div id="panel">
+    YOUR   LOCATION : 
+    <input id="start" type="text">
+    PARTY   LOCATION :
+    <input id="end" type="text" value="51 Brattle St, Cambridge, MA 02138">
+	<input type="button" value="Directions to Party Location" onclick="calcRoute();">
+    </div>
+    <div id="map-canvas"></div>
+  </body>
+</html>
